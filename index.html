@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="author" content="templatemo">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!--For adding the logo in the title bar-->
+  <link rel="icon" href="SnapGallery Logo -cropped.png" type="image/png">
+  <title>SnapGallery</title>
+
+  <!-- Core CSS -->
+  <link href="styles.css" rel="stylesheet">
+
+
+  <!-- Additional CSS File -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <!--
+
+TemplateMo 576 MCMS PHOTOHOUSE
+
+-->
+</head>
+
+<body>
+  <div class="progress-circle" id="progressCircle">
+    <div class="arrow" id="scrollToTop">&uarr;</div>
+  </div>
+  <div class="content">
+  <!-- ***** Header Area Start ***** -->
+ 
+  <header  class="header-area header-sticky" style="color: black;">
+    <div  class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav class="main-nav">
+            <!-- ***** Logo Start ***** -->
+            <a href="index.html" class="logo">
+              <img src="SNAP GALLERY SMALL BANNER.png" alt="MCMS PHOTOHOUSE">
+            </a>
+            <!-- ***** Logo End ***** -->
+            <!-- ***** Menu Start ***** -->
+            <ul class="nav">
+              <li><a href="#" class="active">Home</a></li>
+              <li class="has-sub">
+                <a href="javascript:void(0)">Photos &amp; Videos</a>
+                <ul class="sub-menu">
+                  <li><a href="#photo">Photos</a></li>
+                  <li><a href="#videogl">Videos</a></li>
+                </ul>
+              </li>
+              <li><a href="#">CONTACT</a></li>
+              <li><a href="#artists">ARTISTS</a></li>
+            </ul>
+            <div class="border-button">
+              <a id="modal_trigger" href="#modal" class="sign-in-up"><i class="fa fa-user"></i> Sign In/Up</a>
+            </div>
+            <a class='menu-trigger'>
+              <span>Menu</span>
+            </a>
+            <!-- ***** Menu End ***** -->
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div id="modal" class="popupContainer" style="display:none;">
+    <div class="popupHeader">
+      <span class="header_title">Login</span>
+      <span class="modal_close"><i class="fa fa-times"></i></span>
+    </div>
+
+    <section class="popupBody">
+      <!-- Social Login -->
+      <div class="social_login">
+        <div class="">
+
+          <a href="#" class="social_box google">
+            <span class="icon"><i class="fa-brands fa-google"></i></span>
+            <span class="icon_title">Connect with Google</span>
+          </a>
+
+          <a href="#" class="social_box google">
+            <span class="icon" style="background-color: black;"><i class="fa-brands fa-github"></i></span>
+            <span class="icon_title">Connect with Github</span>
+          </a>
+
+          <a href="#" class="social_box google">
+            <span class="icon" style="background-color: rgb(0, 255, 98);"><i class="fa-solid fa-newspaper"></i></span>
+            <span class="icon_title">New Login Page</span>
+          </a>
+        </div>
+
+        <div class="centeredText">
+          <span>Or use your Email address</span>
+        </div>
+
+        <div class="action_btns">
+          <div class="one_half"><a href="#" id="login_form" class="btn"
+              style="background-color: #00bdfe; color:white">Login</a></div>
+          <div class="one_half last"><a href="#" id="register_form" class="btn"
+              style="background-color: #00bdfe; color:white">Sign up</a></div>
+        </div>
+      </div>
+
+      <!-- Username & Password Login form -->
+      <div class="user_login">
+        <form action="" method="post">
+          <label>Email / Username</label>
+          <input name="username" type="text" id="username" />
+          <br />
+
+          <label>Password</label>
+          <input name="password" type="password" id="password" />
+          <br />
+
+          <div class="checkbox">
+            <input id="remember" type="checkbox" />
+            <label for="remember">Remember me on this computer</label>
+          </div>
+
+          <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn" style="background-color: #00bdfe; color:white"><i
+                  class="fa fa-angle-double-left"></i> Back</a></div>
+            <div class="one_half last"><button type="reset" class="btn btn_red"
+                style="background-color: #00bdfe; color:white">Login <i
+                  class="fa-solid fa-arrow-right-to-bracket"></i></button></div>
+          </div>
+        </form>
+
+        <a href="#" class="forgot_password">Forgot password?</a>
+      </div>
+
+      <!-- Register Form -->
+      <div class="user_register">
+        <form action="" method="post">
+          <label>Username</label>
+          <input name="username" type="text" id="username" />
+          <br />
+
+          <label>Email Address</label>
+          <input name="email" type="email" id="email" />
+          <br />
+
+          <label>Password</label>
+          <input name="password" type="password" id="password" />
+          <br />
+
+          <div class="checkbox">
+            <input id="send_updates" type="checkbox" />
+            <label for="send_updates">Send me occasional email updates</label>
+          </div>
+
+          <div class="action_btns">
+            <div class="one_half"><a href="#" class="btn back_btn" style="background-color: #00bdfe; color:white"><i
+                  class="fa fa-angle-double-left"></i> Back</a></div>
+            <div class="one_half last"><button type="reset" class="btn btn_red"
+                style="background-color: #00bdfe; color:white">Register <i
+                  class="fa-solid fa-right-to-bracket"></i></button></div>
+          </div>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <div class="main-banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+          <div class="header-text">
+            <h2><b>Enter a world of <em>Dreams</em> &amp; Amazing <em>Artists</em></h2>
+            <p>Welcome to the world of Dreams designed by the students of Memari Crystal Model School.Here you can
+              explore the photos captured by our amazing artists. You can also contact them using the Meet Artist
+              button.</p></b>
+            <div class="buttons">
+              <div class="big-border-button">
+                <a href="#photo">Explore SnapGallery</a>
+              </div>
+              <div class="icon-button">
+                <a href="https://youtu.be/89wTI1miuqw" target="_blank"><i class="fa fa-play"></i> Watch Our Video
+                  Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  <section class="featured-items" id="featured-items">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <div class="thumb">
+                <img src="kolkata.avif" alt="kolkata">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Welcome to Kolkata <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(4.5)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Anubhab Manna</span></li>
+                      <li><span>Location: Howrah Bridge</span> </li>
+                      <li><span>Date:</span> 22/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="Aurora.jpg" alt="Aurora">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>8th Wonder: Aurora<i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(3.5)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Adrish Mukherjee</span></li>
+                      <li><span>Location: Antartica</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="fishes.jpg" alt="fishes">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Welcome to the world of underwater <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(4.5)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: Indian Ocean</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="vikram.webp" alt="vikram">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Meet Vikram <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span>(5.0)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Sample name</span></li>
+                      <li><span>Location: Moon</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="girrafe.jpg" alt="girrafe">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>View the world from top <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(4.5)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: India</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="peace.jpg" alt="calm">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Welcome to the world of peace <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(3.5)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: India</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="rock.jpg" alt="rock">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Walk through the rocks <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(3.5)</span></h4>
+                    <ul>
+                     <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: India</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="delhi.webp" alt="delhi">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Indian Morning <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(3.5)</span></h4>
+                    <ul>
+                      <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: India</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="deer.jpg" alt="deer">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Say hello to deers <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                        class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i> <span>(3.5)</span></h4>
+                    <ul>
+                     <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: India</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="thumb">
+                <img src="snow.jpg" alt="snow">
+                <div class="hover-effect">
+                  <div class="content">
+                    <h4>Can you walk through snow? <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                      <span>(3.5)</span></h4>
+                    <ul>
+                     <li><span>Captured by: Sample Name</span></li>
+                      <li><span>Location: India</span></li>
+                      <li><span>Date:</span> 23/03/2024</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="popular-categories" id="artists">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="section-heading">
+            <h6>Our Artists</h6>
+            <h4>Know <em>Our</em> Amazing <em>Artists</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="main-button">
+            <a href="#artists">View All Artists</a>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Anubhab Manna</h4>
+                <span><em>001</em> Active</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile.png" alt="">
+              <span class="category">Top Artist</span>
+              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about him</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Adrish Mukherjee</h4>
+                <span><em>002</em> Active</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile.png" alt="">
+              <span class="category">Top Artist</span>
+              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about him</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile-f.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Samadrita Bhattacharya</h4>
+                <span><em>003</em> Active</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile-f.png" alt="">
+              <span class="category">Top Artist</span>
+              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about her</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Sandhyadip Pal</h4>
+                <span><em>004</em>Active</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile.png" alt="">
+              <span class="category">Top Artist</span>
+              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about him</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile-f.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Rudrani Mukherjee</h4>
+                <span><em>005</em> Active</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile-f.png" alt="">
+              <span class="category">Top Artist</span>
+              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about her</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Ujan Paul</h4>
+                <span><em>006</em> Active</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile.png" alt="">
+              <span class="category">Top Artist</span>
+              <span class="likes"><i class="fa fa-heart"></i> 256</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about him</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Soumyajit Ghosh</h4>
+                <span><em>NA</em> Partial</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile.png" alt="">
+              <span class="category">NA</span>
+              <span class="likes"><i class="fa fa-heart"></i> 0</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about him</a>
+            </div>
+          </div>
+        </div><div class="col-lg-3 col-sm-6">
+          <div class="popular-item">
+            <div class="top-content">
+              <div class="icon">
+                <img src="profile.png" alt="">
+              </div>
+              <div class="right">
+                <h4>Onkar Ghosh</h4>
+                <span><em>NA</em> Partial</span>
+              </div>
+            </div>
+            <div class="thumb">
+              <img src="profile.png" alt="">
+              <span class="category">NA</span>
+              <span class="likes"><i class="fa fa-heart"></i> 0</span>
+            </div>
+            <div class="border-button">
+              <a href="#">Know more about him</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section   class="closed-contests">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h6>Closed Photography Contests</h6>
+            <h4><em>Previous Contests</em> With Handpicked <em>Winners</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="owl-features owl-carousel" style="position: relative; z-index: 5;">
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb">
+                  <img src="assets/images/closed-01.jpg" alt="">
+                  <span class="winner"><em>Winner:</em> Anthony Soft</span>
+                  <span class="price"><em>Award :</em> $1,600</span>
+                </div>
+                <div class="down-content">
+                  <div class="row">
+                    <div class="col-7">
+                      <h4>88 Participants <br><span>Number Of Artists</span></h4>
+                    </div>
+                    <div class="col-5">
+                      <h4 class="pics">320 Pictures <br><span>Submited Pics</span></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb">
+                  <img src="assets/images/closed-02.jpg" alt="">
+                  <span class="winner"><em>Winner:</em> Anthony Soft</span>
+                  <span class="price"><em>Award :</em> $4,200</span>
+                </div>
+                <div class="down-content">
+                  <div class="row">
+                    <div class="col-7">
+                      <h4>96 Participants <br><span>Number Of Artists</span></h4>
+                    </div>
+                    <div class="col-5">
+                      <h4 class="pics">410 Pictures <br><span>Submited Pics</span></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="closed-item">
+                <div class="thumb">
+                  <img src="assets/images/closed-03.jpg" alt="">
+                  <span class="winner"><em>Winner:</em> Anthony Soft</span>
+                  <span class="price"><em>Award :</em> $3,200</span>
+                </div>
+                <div class="down-content">
+                  <div class="row">
+                    <div class="col-7">
+                      <h4>74 Participants <br><span>Number Of Artists</span></h4>
+                    </div>
+                    <div class="col-5">
+                      <h4 class="pics">284 Pictures <br><span>Submited Pics</span></h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-12">
+          <div class="border-button text-center">
+            <a href="#">Browse Open Contests</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-plans">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading text-center">
+            <h6>Our Pricing</h6>
+            <h4>Photography <em>Contest Plans</em> and Price <em>Awards</em></h4>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <img src="assets/images/pricing-01.jpg" alt="">
+            <h4>Basic Plan</h4>
+            <ul class="first-plan">
+              <li>Lorem Ipsum Dolores Sonte</li>
+              <li>Songe Lorem Ipsum Dol</li>
+              <li>Matrios Venga Heptuss</li>
+              <li>Denim Sriracha Kogi</li>
+              <li>Digital Photography Awards</li>
+            </ul>
+            <span class="price">$25 USD</span>
+            <div class="border-button">
+              <a href="#">Choose This Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <img src="assets/images/pricing-02.jpg" alt="">
+            <h4>Standard Plan</h4>
+            <ul class="second-plan">
+              <li>Lorem Ipsum Dolores Sonte</li>
+              <li>Songe Lorem Ipsum Dol</li>
+              <li>Matrios Venga Heptuss</li>
+              <li>Denim Sriracha Kogi</li>
+              <li>Digital Photography Awards</li>
+            </ul>
+            <span class="price">$45 USD</span>
+            <div class="border-button">
+              <a href="#">Choose This Plan</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="pricing-item">
+            <img src="assets/images/pricing-03.jpg" alt="">
+            <h4>Advanced Plan</h4>
+            <ul class="third-plan">
+              <li>Lorem Ipsum Dolores Sonte</li>
+              <li>Songe Lorem Ipsum Dol</li>
+              <li>Matrios Venga Heptuss</li>
+              <li>Denim Sriracha Kogi</li>
+              <li>Digital Photography Awards</li>
+            </ul>
+            <span class="price">$85 USD</span>
+            <div class="border-button">
+              <a href="#">Choose This Plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="photo" class="photo-section">
+    <h1>Explore Our <em style="color: #00bdfe;">Snap Gallery</em></h1>
+    <div class="photo-gallery">
+      <div class="photo-item">
+        <img src="Daria ❄ on Twitter.jpeg" alt="Photo 1">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="sunset boulevard.jpeg" alt="Photo 2">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="Daria ❄ on Twitter.jpeg" alt="Photo 3">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="'Natures window' by jamierichey!.jpeg" alt="Photo 4">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="Wander the wood.jpeg" alt="Photo 5">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="Cowboy on horse in Monument Valley (Arizona _ Utah).jpeg" alt="Photo 6">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="Canadian Rockies, Rocky Mountains, Banff National Park, Emerald Lake, Forests, Mountain Photography, Landscape Photography, Green Wall Art.jpeg" alt="Photo 7">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="California Ocean Waves _landscape _photography 💙.jpeg" alt="Photo 8">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="Landscape, Animals & Quotes.jpeg" alt="Photo 9">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="'Natures window' by jamierichey!.jpeg" alt="Photo 10">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="093a9f1c-c21b-4553-b2e9-241151151677.jpeg" alt="Photo 11">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="'Natures window' by jamierichey!.jpeg" alt="Photo 12">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Samadrita Bhattacharya</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="photo-1600851184880-db4ecb672052.jpeg" alt="Photo 13">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Ujan Paul</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="photo-1529612742026-938119ef0b77.jpeg" alt="Photo 14">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Ujan Paul</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="photo-1500817487388-039e623edc21.jpeg" alt="Photo 15">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Ujan Paul</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="photo-1419064642531-e575728395f2.jpeg" alt="Photo 16">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Ujan Paul</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="photo-1532274402911-5a369e4c4bb5.jpeg" alt="Photo 17">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Ujan Paul</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="photo-item">
+        <img src="photo-1523712999610-f77fbcfc3843.jpeg" alt="Photo 18">
+        <button class="details-btn">Meet Artist</button>
+        <div class="photographer-details">
+          <button class="close-btn"><b>Hide</b></button>
+          <p>Photographer: Ujan Paul</p>
+          <p>Location: India</p>
+        </div>
+      </div>
+      <div class="image-viewer">
+        <div class="image-frame">
+        <img id="zoomedImage" src="" alt="Zoomed Image">
+      </div>
+    </div>
+  </section>
+  <section id="videogl">
+    <div class="gallery">
+      <div class="filters">
+          <button class="filter-btn active" onclick="showSection('videos')">Videos</button>
+      </div>
+      <div id="videos" class="media-section">
+          <div class="video">
+              <video id="video1" controls>
+                  <source src="vd1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-buttons">
+                  <button class="action-btn play-btn" onclick="playVideo('video1')">Play</button>
+                  <a class="action-btn download-btn" href="vd1.mp4" download>Download</a>
+                  <button class="action-btn fullscreen-btn" onclick="fullscreenVideo('video1')"><i class="fas fa-expand"></i></button>
+                  <button class="action-btn bookmark-btn" onclick="bookmarkVideo('video1')"><i class="fas fa-bookmark"></i></button>
+                  
+              </div>
+          </div>
+          <div class="video">
+              <video id="video2" controls>
+                  <source src="vd1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-buttons">
+                  <button class="action-btn play-btn" onclick="playVideo('video2')">Play</button>
+                  <a class="action-btn download-btn" href="vd1.mp4" download>Download</a>
+                  <button class="action-btn fullscreen-btn" onclick="fullscreenVideo('video1')"><i class="fas fa-expand"></i></button>
+                  <button class="action-btn bookmark-btn" onclick="bookmarkVideo('video2')"><i class="fas fa-bookmark"></i></button>
+                  
+              </div>
+          </div>
+          <div class="video">
+              <video id="video3" controls>
+                  <source src="vd1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-buttons">
+                  <button class="action-btn play-btn" onclick="playVideo('video3')">Play</button>
+                  <a class="action-btn download-btn" href="vd1.mp4" download>Download</a>
+                  <button class="action-btn fullscreen-btn" onclick="fullscreenVideo('video1')"><i class="fas fa-expand"></i></button>
+                  <button class="action-btn bookmark-btn" onclick="bookmarkVideo('video3')"><i class="fas fa-bookmark"></i></button>
+                  
+              </div>
+          </div>
+          <div class="video">
+              <video id="video4" controls>
+                  <source src="vd1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-buttons">
+                  <button class="action-btn play-btn" onclick="playVideo('video4')">Play</button>
+                  <a class="action-btn download-btn" href="vd1.mp4" download>Download</a>
+                  <button class="action-btn fullscreen-btn" onclick="fullscreenVideo('video1')"><i class="fas fa-expand"></i></button>
+                  <button class="action-btn bookmark-btn" onclick="bookmarkVideo('video4')"><i class="fas fa-bookmark"></i></button>
+                  
+              </div>
+          </div>
+          <div class="video">
+              <video id="video5" controls>
+                  <source src="vd1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-buttons">
+                  <button class="action-btn play-btn" onclick="playVideo('video5')">Play</button>
+                  <a class="action-btn download-btn" href="vd1.mp4" download>Download</a>
+                  <button class="action-btn fullscreen-btn" onclick="fullscreenVideo('video1')"><i class="fas fa-expand"></i></button>
+                  <button class="action-btn bookmark-btn" onclick="bookmarkVideo('video5')"><i class="fas fa-bookmark"></i></button>
+                  
+              </div>
+          </div>
+          <div class="video">
+              <video id="video6" controls>
+                  <source src="vd1.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+              <div class="video-buttons">
+                  <button class="action-btn play-btn" onclick="playVideo('video6')">Play</button>
+                  <a class="action-btn download-btn" href="vd1.mp4" download>Download</a>
+                  <button class="action-btn fullscreen-btn" onclick="fullscreenVideo('video1')"><i class="fas fa-expand"></i></button>
+                  <button class="action-btn bookmark-btn" onclick="bookmarkVideo('video6')"><i class="fas fa-bookmark"></i></button>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2024 <a href="#">SnapGallery</a> Co. Ltd. All rights reserved.
+
+            Design: <a title="CSS Templates" rel="sponsored" href="https://templatemo.com/page/1"
+              target="_blank">TemplateMo</a> Distribution: <a title="CSS Templatesss" rel="sponsored"
+              href="https://themewagon.com" target="_blank">ThemeWagon</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="script.js"></script>
+  <script src="https://kit.fontawesome.com/6c217b46d5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
